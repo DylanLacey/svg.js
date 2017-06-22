@@ -127,7 +127,11 @@ module.exports = function(config) {
       // start these browsers
       browsers: Object.keys(SauceLabsLaunchers),
       sauceLabs: {
-          testName: 'SVG.js Unit Tests'
+          testName: 'SVG.js Unit Tests',
+          startConnect: true,
+          connectOptions: {
+            noSslBumpDomains: 'all'   // Needed so Firefox doesn't choke on custom profiles; See Sauce Labs ticket 39410
+          }
       },
 
       // The number of disconnections tolerated.
