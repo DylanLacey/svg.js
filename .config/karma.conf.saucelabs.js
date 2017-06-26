@@ -128,9 +128,8 @@ module.exports = function(config) {
       browsers: Object.keys(SauceLabsLaunchers),
       sauceLabs: {
           testName: 'SVG.js Unit Tests',
-          startConnect: true,
           connectOptions: {
-            noSslBumpDomains: 'all'   // Needed so Firefox doesn't choke on custom profiles; See Sauce Labs ticket 39410
+            noSslBumpDomains: 'all'
           }
       },
 
@@ -153,15 +152,15 @@ module.exports = function(config) {
       // enable / disable watching file and executing tests whenever any file changes
       autoWatch: false,
 
+      hostname: "karmalocal.com",
+
       // Continuous Integration mode
       // if true, Karma captures browsers, runs the tests and exits
       singleRun: true,
 
       // Concurrency level
       // how many browser should be started simultaneous
-      concurrency: 2,
-
-      hostname: 'karmalocal.com'
+      concurrency: 2
     })
 
   )
