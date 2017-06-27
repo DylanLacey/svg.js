@@ -127,7 +127,10 @@ module.exports = function(config) {
       // start these browsers
       browsers: Object.keys(SauceLabsLaunchers),
       sauceLabs: {
-          testName: 'SVG.js Unit Tests'
+          testName: 'SVG.js Unit Tests',
+          connectOptions: {
+            noSslBumpDomains: "all"
+          }
       },
 
       // The number of disconnections tolerated.
@@ -157,7 +160,7 @@ module.exports = function(config) {
       // how many browser should be started simultaneous
       concurrency: 2,
 
-      hostname: 'karmalocal.com'
+      hostname: 'karmalocal.dev'
     })
 
   )
