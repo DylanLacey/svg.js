@@ -14,4 +14,5 @@ script:
 - cat coverage/firefox/lcov.info | node_modules/.bin/coveralls
 sudo: required
 addons:
-  hostname: karmalocal
+  hosts: 
+    - karmalocal.dev

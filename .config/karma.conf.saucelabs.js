@@ -152,7 +152,7 @@ module.exports = function(config) {
       // enable / disable watching file and executing tests whenever any file changes
       autoWatch: false,
 
-      hostname: "karmalocal",
+      hostname: "karmalocal.dev",
 
       // Continuous Integration mode
       // if true, Karma captures browsers, runs the tests and exits
